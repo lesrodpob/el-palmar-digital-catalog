@@ -33,3 +33,5 @@ npm run dev
 - Más categorías
 - Fuente de datos actualizada
 - Publicación online
+
+- This project includes an interactive digital catalog prototype.
