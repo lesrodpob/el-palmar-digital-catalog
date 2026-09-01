@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+    --ink: #171717;
+    --muted: #686868;
+    --gold: #c79a2b;
+    --cream: #faf7f0;
+    --line: #e8e1d5;
+    --green: #18844b
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: var(--ink);
+    background: var(--cream)
+}
+
+button,
+input,
+select {
+    font: inherit
+}
+
+.hero {
+    background: #0b0b0b;
+    color: white;
+    border-bottom: 4px solid var(--gold)
+}
+
+.hero-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    gap: 26px
+}
+
+.logo {
+    width: 180px;
+    height: 180px;
+    border-radius: 18px;
+    object-fit: contain
+}
+
+.hero-copy {
+    flex: 1
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #e7c96c;
+    font-weight: 700
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin: 4px 0
+}
+
+.hero p {
+    margin: 0;
+    color: #d8d8d8
+}
+
+.order-pill {
+    border: 1px solid #e7c96c;
+    background: transparent;
+    color: white;
+    border-radius: 999px;
+    padding: 13px 20px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.order-pill:disabled {
+    opacity: .45
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 28px
+}
+
+.toolbar {
+    display: flex;
+    gap: 16px;
+    align-items: center
+}
+
+.search {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1
+}
+
+.search span {
+    font-size: 25px
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    padding: 15px 0;
+    width: 100%;
+    background: transparent
+}
+
+.availability {
+    font-size: 14px;
+    color: var(--muted);
+    white-space: nowrap
+}
+
+.categories {
+    display: flex;
+    gap: 10px;
+    margin: 22px 0 14px
+}
+
+.categories button {
+    border: 1px solid var(--line);
+    background: white;
+    border-radius: 999px;
+    padding: 9px 18px;
+    cursor: pointer;
+    font-weight: 700
+}
+
+.categories button.active {
+    background: #171717;
+    color: white;
+    border-color: #171717
+}
+
+.family-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 14px
+}
+
+.family-row select {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: white;
+    padding: 10px 14px;
+    min-width: 220px
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .04);
+    display: flex;
+    flex-direction: column
+}
+
+.product-art {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #efe4c9, #faf8f2);
+    position: relative
+}
+
+.product-art.licores {
+    background: linear-gradient(135deg, #e4d2ba, #faf5ec)
+}
+
+.product-art span {
+    font-size: 62px
+}
+
+.product-image {
+    width: 140px;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-art small {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #6d5a39
+}
+
+.card-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1
+}
+
+.tag {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #8a6b22
+}
+
+.card h2 {
+    font-size: 15px;
+    line-height: 1.35;
+    margin: 7px 0 12px;
+    min-height: 42px
+}
+
+.price {
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 7px
+}
+
+.stock {
+    font-size: 12px;
+    margin-bottom: 13px
+}
+
+.stock.in {
+    color: var(--green)
+}
+
+.stock.out {
+    color: #a04747
+}
+
+.add {
+    margin-top: auto;
+    border: 0;
+    border-radius: 10px;
+    padding: 11px;
+    background: #171717;
+    color: white;
+    cursor: pointer;
+    font-weight: 700
+}
+
+.add:disabled {
+    opacity: .45;
+    cursor: default
+}
+
+.empty {
+    text-align: center;
+    padding: 60px;
+    color: var(--muted)
+}
+
+footer {
+    text-align: center;
+    padding: 35px;
+    color: #8a8a8a;
+    font-size: 12px
+}
+
+.floating {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #111;
+    color: white;
+    border-radius: 16px;
+    padding: 13px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .3);
+    z-index: 5
+}
+
+.floating div {
+    display: flex;
+    flex-direction: column
+}
+
+.floating span {
+    font-size: 11px;
+    color: #bbb
+}
+
+.floating button {
+    border: 0;
+    border-radius: 9px;
+    padding: 10px 14px;
+    background: #20b45f;
+    color: white;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.floating .clear {
+    background: #333;
+    color: #ddd
+}
+
+@media(max-width:900px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .logo {
+        width: 82px;
+        height: 82px
+    }
+
+    h1 {
+        font-size: 32px
+    }
+}
+
+@media(max-width:650px) {
+    .hero-inner {
+        align-items: flex-start;
+        flex-wrap: wrap
+    }
+
+    .hero-copy {
+        min-width: calc(100% - 110px)
+    }
+
+    .order-pill {
+        width: 100%
+    }
+
+    main {
+        padding: 18px
+    }
+
+    .toolbar {
+        flex-direction: column;
+        align-items: stretch
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px
+    }
+
+    .product-art {
+        height: 145px
+    }
+
+    .card h2 {
+        font-size: 14px
+    }
+
+    .floating {
+        width: calc(100% - 24px);
+        bottom: 12px
+    }
+
+    .family-row {
+        gap: 10px
+    }
+
+    .family-row select {
+        min-width: 0;
+        flex: 1
+    }
+
+    .product-image {
+        width: 140px;
+        height: 160px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+}
